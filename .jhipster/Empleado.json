@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705182818",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "empleado",
+  "fields": [
+    {
+      "fieldName": "nombres",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellidos",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaNacimiento",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tipoIdentificacion",
+      "fieldType": "TipoIdentificacion",
+      "fieldValues": "CC,CE,PASAPORTE"
+    },
+    {
+      "fieldName": "numeroIdentificacion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Empleado",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "actividad",
+      "otherEntityRelationshipName": "empleado",
+      "relationshipName": "actividad",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

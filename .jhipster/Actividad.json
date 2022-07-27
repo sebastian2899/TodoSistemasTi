@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20220705182817",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "actividad",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fechaEstimadaEjecucion",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "EstadoActividad",
+      "fieldValues": "PENDIENTE,REALIZADA"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Actividad",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "empleado",
+      "otherEntityRelationshipName": "actividad",
+      "relationshipName": "empleado",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
